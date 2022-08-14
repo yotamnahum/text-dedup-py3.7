@@ -5,8 +5,11 @@ from __future__ import annotations
 
 import logging
 import os
-from typing import Any, Dict, List, Literal, Optional
-
+from typing import Any, Dict, List, Optional
+try:
+    from typing import Literal
+except ImportError:
+    from typing_extensions import Literal
 import numpy as np
 from annoy import AnnoyIndex
 from datasketch import MinHash, MinHashLSH
